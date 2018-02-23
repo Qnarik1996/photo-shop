@@ -1,0 +1,18 @@
+page-slide {
+ion-content{
+    .scroll-content{
+        overflow: hidden
+    }
+    .button-next{
+        position: absolute;      
+        bottom: 20vh;
+        z-index: 1;
+        width: 100%;
+        text-align: center;
+        .button{
+            margin: 0 auto;
+        }
+    
+    }
+}
+}

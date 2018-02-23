@@ -1,0 +1,17 @@
+<ion-content>
+<ion-slides (ionSlideDidChange)="slideChanged()">
+  <ion-slide>
+    <h1>Slide 1</h1>
+  </ion-slide>
+  <ion-slide>
+    <h1>Slide 2</h1>
+  </ion-slide>
+  <ion-slide>
+    <h1>Slide 3</h1>
+  </ion-slide>
+</ion-slides>
+<div class="button-next"> 
+  <button ion-button round (tap)="goToSlide()">{{buttonText}}</button>
+</div>
+
+</ion-content>
