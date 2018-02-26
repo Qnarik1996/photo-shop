@@ -1,31 +1,34 @@
+<ion-content>
+        <div class="header"></div>
+        <div class="reg">
+                <form [formGroup]="requiredList">
+                        <ion-item>
+                                <ion-label color="primary" stacked>Name</ion-label>
+                                <ion-input [(ngModel)]="name" type="text" formControlName="name"></ion-input>
 
-<ion-content >
-    <div class="header"></div>
-    <div class="reg">
-        <ion-item>
-                <ion-label color="primary" stacked>Name</ion-label>
-                <ion-input></ion-input>
-        
-        </ion-item>
-        <ion-item>
-                <ion-label color="primary" stacked>Email</ion-label>
-                <ion-input></ion-input>
-        
-        </ion-item>
-        <ion-item>
-                <ion-label color="primary" stacked>Tel</ion-label>
-                <ion-input></ion-input>
-        
-        </ion-item>
-        <ion-item>
-                <ion-label color="primary" stacked>Password</ion-label>
-                <ion-input></ion-input>
-        
-        </ion-item>
-        <ion-item>
-                <ion-label color="primary" stacked>Password</ion-label>
-                <ion-input></ion-input>
-        
-        </ion-item>
-    </div>
+                        </ion-item>
+                        <ion-item>
+                                <ion-label color="primary" stacked>Email</ion-label>
+                                <ion-input [(ngModel)]="email" formControlName="email"></ion-input>
+                        </ion-item>
+                        <ion-item [ngClass]="{bottomOn:!chenge, bottomOff:chenge}"(tap)="chengecolor()">
+                                <label for="phone" color="primary" stacked class="Telnumber">Telnumber</label> <br>
+                                <input type="text" id="phone" [(ngModel)]="tel" formControlName="telPhone" [textMask]="{mask: mask}">
+                                <ion-icon [class.valid]="requiredList.controls.telPhone.valid" [class.invalid]="!requiredList.controls.telPhone.valid" name="heart"></ion-icon>
+                        </ion-item>
+                        <ion-item>
+                                <ion-label color="primary" stacked>Password</ion-label>
+                                <ion-input type="password" [(ngModel)]="password1" formControlName="password1"></ion-input>
+
+                        </ion-item>
+                        <ion-item>
+                                <ion-label color="primary" stacked>Repeat your password</ion-label>
+                                <ion-input type="password" [(ngModel)]="password2" formControlName="password2"></ion-input>
+
+                        </ion-item>
+                        <div class="sign-up">
+                                <button ion-button round [disabled]="!requiredList.valid || !(password1==password2)" (tap)="sign()">Sign Up</button>
+                        </div>
+                </form>
+        </div>
 </ion-content>
