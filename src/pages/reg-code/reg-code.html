@@ -1,4 +1,21 @@
 
 <ion-content>
-  <div>sdwfvgv</div>
+  <button icon-only ion-button color="light" (tap)="back()">
+      <ion-icon md="md-arrow-round-back" ios="md-arrow-round-back"></ion-icon>
+  </button>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button (tap)="codeMail()" ion-button round>Email</button>
+      </ion-col>
+    </ion-row>
+      <ion-row>
+          <ion-col>
+              <button (tap)="codePhone()" ion-button round>Telephone</button>
+            </ion-col>
+      </ion-row>
+     
+  
+  </ion-grid>
+  
 </ion-content>

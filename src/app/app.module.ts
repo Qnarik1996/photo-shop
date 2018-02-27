@@ -1,38 +1,42 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler} from '@angular/core';
+import { ErrorHandler,NgModule} from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 //mask
+import {Ionic2MaskDirective} from "ionic2-mask-directive";
+//service
+import {Local} from '../service/local'
 
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { TextMaskModule } from 'angular2-text-mask';
-
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+//components
 import {SlidePage,
         SugnPage,  
         RegistrPage,
-        RegCodePage
+        RegCodePage,
+        HomePage,
+        MyApp,
+        CodeTelphonePage,
+        CodeMailPage,
       
       } from '../pages/barrel'
 
 @NgModule({
   declarations: [
+    Ionic2MaskDirective,
     MyApp,
     HomePage,
     SlidePage,
     SugnPage,
     RegistrPage,
-    RegCodePage
+    RegCodePage,
+    CodeTelphonePage,
+    CodeMailPage,
   ],
   imports: [
-    FormsModule,
+ 
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    TextMaskModule 
-   
+ 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -41,9 +45,12 @@ import {SlidePage,
     SlidePage,
     SugnPage,
     RegistrPage,
-    RegCodePage
+    RegCodePage,
+    CodeTelphonePage,
+    CodeMailPage,
   ],
   providers: [
+    Local,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

@@ -18,41 +18,7 @@ page-registr {
             text-align: center;
             margin-top: 3vh;
         }
-    #phone{
-        border:none;
-        
-    }
-    .Telnumber{
-        color: #488aff;
-        font-size: 1.2rem;
-        float: left
-    }
-    
-    .bottomOn{
-        padding-right: 8px;
-        border-bottom: 1px solid #dedede;
-        .item-md.item-block .item-inner{
-            border-bottom: none
-        }
-    }
-    .bottomOff{
-        padding-right: 8px; 
-        border-bottom: 1px solid #488aff
-    }
-    .click-on{
-        padding-right: 8px; 
-        border-bottom: 1px solid red
-    }
-    .click-off{
-        padding-right: 8px; 
-        border-bottom: 1px solid green
-    }
-    .valid{
-        color:green
-    }
-    .invalid{
-        color:red
-    }
+   
 
     }
 }

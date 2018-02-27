@@ -11,10 +11,9 @@
                                 <ion-label color="primary" stacked>Email</ion-label>
                                 <ion-input [(ngModel)]="email" formControlName="email"></ion-input>
                         </ion-item>
-                        <ion-item [ngClass]="{bottomOn:!chenge, bottomOff:chenge}"(tap)="chengecolor()">
-                                <label for="phone" color="primary" stacked class="Telnumber">Telnumber</label> <br>
-                                <input type="text" id="phone" [(ngModel)]="tel" formControlName="telPhone" [textMask]="{mask: mask}">
-                                <ion-icon [class.valid]="requiredList.controls.telPhone.valid" [class.invalid]="!requiredList.controls.telPhone.valid" name="heart"></ion-icon>
+                        <ion-item>
+                                <ion-label  color="primary" stacked >Telnumber</ion-label>
+                                <ion-input type="text"  [(ngModel)]="tel" formControlName="telPhone" mask="(+999)99-99-99-99"></ion-input>
                         </ion-item>
                         <ion-item>
                                 <ion-label color="primary" stacked>Password</ion-label>
