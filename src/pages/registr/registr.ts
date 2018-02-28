@@ -33,8 +33,8 @@ ngOnInit(){
     name:['',Validators.compose([Validators.required])],
     telPhone:['',Validators.compose([Validators.required,Validators.pattern('[(][+][0-9]{3}[)][0-9]{2}[-][0-9]{2}[-][0-9]{2}[-][0-9]{2}')])],
     email:['',Validators.compose([Validators.required,Validators.email])],
-    password1:['',Validators.compose([Validators.required])],
-    password2:['',Validators.compose([Validators.required])],
+    password1:['',Validators.compose([Validators.required, Validators.minLength(4)])],
+    password2:['',Validators.compose([Validators.required, Validators.minLength(4)])],
   })
 }
 sign(){

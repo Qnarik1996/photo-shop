@@ -5,4 +5,8 @@ export * from './sugn/sugn';
 export * from './registr/registr';
 export * from './reg-code/reg-code';
 export * from './code-mail/code-mail';
-export * from './code-telphone/code-telphone'
+export * from './code-telphone/code-telphone';
+export * from './menu/menu';
+export * from './edit/edit';
+export * from './photo/photo';
+export * from './order/order';

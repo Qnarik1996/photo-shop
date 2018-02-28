@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 //mask
 import {Ionic2MaskDirective} from "ionic2-mask-directive";
+import { FormsModule } from '@angular/forms';
+import { TextMaskModule } from 'angular2-text-mask';
 //service
 import {Local} from '../service/local'
 
@@ -17,7 +19,10 @@ import {SlidePage,
         MyApp,
         CodeTelphonePage,
         CodeMailPage,
-      
+        MenuPage,
+        EditPage,
+        PhotoPage,
+        OrderPage
       } from '../pages/barrel'
 
 @NgModule({
@@ -31,11 +36,17 @@ import {SlidePage,
     RegCodePage,
     CodeTelphonePage,
     CodeMailPage,
+    MenuPage,
+    EditPage,
+    PhotoPage,
+    OrderPage
   ],
   imports: [
  
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    FormsModule,
+    TextMaskModule
  
   ],
   bootstrap: [IonicApp],
@@ -48,6 +59,10 @@ import {SlidePage,
     RegCodePage,
     CodeTelphonePage,
     CodeMailPage,
+    MenuPage,
+    EditPage,
+    PhotoPage,
+    OrderPage
   ],
   providers: [
     Local,

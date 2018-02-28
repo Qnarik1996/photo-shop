@@ -4,4 +4,12 @@
         <ion-icon md="md-arrow-round-back" ios="md-arrow-round-back"></ion-icon>
     </button>
     <div>Mail</div>
+    <form  [formGroup]="form">
+    <ion-item>
+        <input [(ngModel)]="mailKode" formControlName="kod" [textMask]="{mask: mask, placeholderChar:'*'}" > 
+    </ion-item>
+</form>
+<div class="go">
+<button ion-button [disabled]="!form.valid" round (tap)="openHome()"> GO  </button>
+</div>
 </ion-content>
