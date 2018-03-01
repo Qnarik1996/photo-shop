@@ -1,12 +1,21 @@
 <ion-menu type="overlay" [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content >
+ 
+  <ion-content>
+      <div class="newheader" >
+    
+          <ion-title>Menu</ion-title>
+          <div class="profile">
+             <img class="picture" src="assets/imgs/baby.jpg">            
+            </div>
+            <div center style="color:white"> <span>(your city)</span></div>
+
+         
+      
+      </div>
     <ion-list>
-      <button *ngFor="let  item of pages" menuClose ion-item (click)="openPage(item)">
+    
+      <button *ngFor="let  item of pages" no-lines menuClose ion-item (click)="openPage(item)">
+          <ion-icon color="newblue" name="checkmark-circle" item-start></ion-icon>
       {{item.pageName}}
       </button>
      

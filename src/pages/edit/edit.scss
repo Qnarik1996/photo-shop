@@ -1,3 +1,32 @@
 page-edit {
-
+    .header .toolbar:last-child .toolbar-background{
+       background: rgba(28, 206, 238, 0.87);
+       border-width: 0
+    }
+    .button-inner{
+        color: white
+    }
+    .title-name{
+        color: white
+    }
+    .back-button.show-back-button{
+        position: absolute
+    }
+    
+    ion-content{
+        scroll-content{
+            overflow: hidden
+        
+    }
+ .profile{
+    height: 20vh;
+    background: rgba(28, 206, 238, 0.87);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin-top: 9vh;
+    .picture{
+        margin-top: 10vh
+    }
+ }
+}
 }

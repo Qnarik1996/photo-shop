@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { PhotoPage, FramePage } from '../barrel';
 
 @Component({
   selector: 'page-home',
@@ -7,14 +8,14 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
   searchQuery: string = '';
-  items: string[];
+  items: any[];
   constructor(public navCtrl: NavController ) {
     this.initializeItems();
   }
   initializeItems() {
     this.items = [
-      'Photo',
-      'Frame',
+      {name:'Photo',component:PhotoPage},
+      {name:'Frame',component:FramePage},
     ];
   }
 
@@ -23,8 +24,11 @@ getItems(ev: any) {
   let val = ev.target.value;
   if (val && val.trim() != '') {
     this.items = this.items.filter((item) => {
-      return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
     })
   }
+}
+appPage(page){
+  this.navCtrl.setRoot(page.component,{'pageName':page.name})
 }
 }

@@ -10,3 +10,5 @@ export * from './menu/menu';
 export * from './edit/edit';
 export * from './photo/photo';
 export * from './order/order';
+export * from './other-header';
+export * from './frame/frame'

@@ -25,18 +25,14 @@ export class MenuPage {
       pageName:"Home",
       component:HomePage
     },
-    
-    {
-      pageName:"Photo",
-      component: PhotoPage
-    },
+  
     {
       pageName:"Order",
       component:OrderPage
     }
   ]
   openPage(page){
-      this.nav.setRoot(page.component)
+      this.nav.push(page.component,{'pageName':page.pageName})
     }
   }
 

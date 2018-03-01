@@ -22,7 +22,9 @@ import {SlidePage,
         MenuPage,
         EditPage,
         PhotoPage,
-        OrderPage
+        OrderPage,
+        OtherHeader,
+        FramePage
       } from '../pages/barrel'
 
 @NgModule({
@@ -39,7 +41,9 @@ import {SlidePage,
     MenuPage,
     EditPage,
     PhotoPage,
-    OrderPage
+    OrderPage,
+    OtherHeader,
+    FramePage
   ],
   imports: [
  
@@ -62,7 +66,9 @@ import {SlidePage,
     MenuPage,
     EditPage,
     PhotoPage,
-    OrderPage
+    OrderPage,
+    OtherHeader,
+    FramePage
   ],
   providers: [
     Local,

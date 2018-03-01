@@ -1,3 +1,24 @@
 page-menu {
+    *[center]{
+        text-align: center
+    }
+    .newheader{
+        background: rgba(28, 206, 238, 0.87);
+        height: 40%;
+        padding: 2vh 0
+    }
+    .toolbar-title{
+        color: white
+    }
+    .profile{
+        text-align: center
+    }
+    .picture{
+        border-radius: 50%;
+        height: 15vh;
+        width: 15vh;
+        margin-top: 2vh;
 
+    }
+  
 }

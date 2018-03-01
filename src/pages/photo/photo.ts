@@ -7,8 +7,9 @@ import {  NavController, NavParams } from 'ionic-angular';
   templateUrl: 'photo.html',
 })
 export class PhotoPage {
-
+  pageName;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.pageName=this.navParams.get('pageName')
   }
 
 
