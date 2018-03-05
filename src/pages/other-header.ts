@@ -12,6 +12,7 @@ import {Component, Input} from '@angular/core';
                 <div class="title-name">
                 <span>{{pageName}}</span>
                 </div>
+               
     </ion-navbar>
 </ion-header>
     `,

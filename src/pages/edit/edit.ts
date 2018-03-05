@@ -11,7 +11,9 @@ export class EditPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.pageName=this.navParams.get('pageName')
   }
-
+back(){
+  this.navCtrl.pop()
+}
 
 
 }

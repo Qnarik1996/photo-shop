@@ -48,7 +48,9 @@ import {SlidePage,
   imports: [
  
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      mode:'ios'
+    }),
     FormsModule,
     TextMaskModule
  

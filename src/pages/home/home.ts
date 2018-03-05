@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PhotoPage, FramePage } from '../barrel';
+import { ModalController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -9,12 +10,13 @@ import { PhotoPage, FramePage } from '../barrel';
 export class HomePage {
   searchQuery: string = '';
   items: any[];
-  constructor(public navCtrl: NavController ) {
+ 
+  constructor(public navCtrl: NavController,public modalCtrl:ModalController ) {
     this.initializeItems();
   }
   initializeItems() {
     this.items = [
-      {name:'Photo',component:PhotoPage},
+      {name:'Photos',component:PhotoPage},
       {name:'Frame',component:FramePage},
     ];
   }
@@ -29,6 +31,8 @@ getItems(ev: any) {
   }
 }
 appPage(page){
-  this.navCtrl.setRoot(page.component,{'pageName':page.name})
+  let modal=this.modalCtrl.create(page.component,{'pageName':page.pageName});
+    modal.present();
 }
+
 }

@@ -1,3 +1,18 @@
 page-order {
-
+    .header .toolbar:last-child .toolbar-background{
+        background: rgba(28, 206, 238, 0.87);
+        border-width: 0
+     }
+     ion-icon{
+         color: whitesmoke
+     }
+     ion-content{
+         .price{
+            border-bottom: 1px solid silver;
+         }
+         [col-3]{
+             max-width: fit-content;
+             width: fit-content
+         }
+     }
 }

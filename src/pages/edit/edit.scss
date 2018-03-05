@@ -21,12 +21,24 @@ page-edit {
  .profile{
     height: 20vh;
     background: rgba(28, 206, 238, 0.87);
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    margin-top: 9vh;
+   
     .picture{
         margin-top: 10vh
     }
+ }
+ .text{
+    margin-top: 10vh;
+    padding: 3vh;
+    color: grey;
+    font-size: 1.2em
+ }
+ .item-inner{
+    background: rgba(28, 206, 238, 0.34);
+   border-radius: 12px
+ }
+ ion-label{
+    font-size: 1.5rem;
+    color: grey;
  }
 }
 }

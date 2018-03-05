@@ -1,5 +1,45 @@
-<other-header [pageName]="pageName"></other-header>
-
-<ion-content padding>
-
+<ion-header>
+    <ion-navbar>
+        <ion-title>Photos</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <button ion-button icon-only>
+        <ion-icon name="add"></ion-icon>
+    </button>
 </ion-content>
+<ion-footer>
+    <ion-grid>
+        <ion-row justify-content-around>
+            <ion-col>
+                <ion-select [(ngModel)]="selectText" cancelText="Dismiss" okText="Okay">
+                    <ion-option value="10x10">10x10</ion-option>
+                    <ion-option value="20x20">20x20</ion-option>
+                    <ion-option value="30x30" selected="true">30x30</ion-option>
+                    <ion-option value="40x40">40x40</ion-option>
+                    <ion-option value="50x50">50x50</ion-option>
+                    <ion-option value="60x60">60x60</ion-option>
+                </ion-select>
+            </ion-col>
+            <ion-col >
+                <div class="count-div">
+                    <button ion-button (tap)="back()">
+                        <ion-icon name="arrow-back"></ion-icon>
+                    </button>
+                    <span class="count">{{count}}</span>
+                    <button ion-button (tap)="next()">
+                        <ion-icon name="arrow-forward"></ion-icon>
+                    </button>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row justify-content-between>
+            <ion-col>
+                <button ion-button>Ok!</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button (tap)="closer()">Close</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

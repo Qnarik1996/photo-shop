@@ -1,7 +1,48 @@
 
-<other-header [pageName]="pageName"></other-header>
-
-
-<ion-content padding>
-
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons start>
+        <button (tap)="back()" ion-button icon-only color="royal">
+          <ion-icon md="md-arrow-back" ios="md-arrow-back"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>{{pageName}}</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only menuToggle color="royal">
+         <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content >
+  
+      
+          <ion-grid class="price">
+                <ion-row justify-content-end>
+                        <ion-col col-3>
+                          <div style="font-size: 1.7rem">$0</div>
+                        </ion-col>
+                        <ion-col col-1>
+                          <div><ion-checkbox color="secondary" checked="true"></ion-checkbox></div>
+                        </ion-col>
+                      </ion-row>
+          </ion-grid>   
+      
+ 
 </ion-content>
+<ion-footer>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <button ion-button (tap)="photo()">
+                    Choose Photo
+                </button>
+            </ion-col>
+            <ion-col>
+                    <button ion-button (tap)="frame()">
+                            Choose Frame
+                        </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

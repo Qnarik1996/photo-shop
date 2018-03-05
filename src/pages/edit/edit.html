@@ -1,11 +1,30 @@
 
-<other-header [pageName]="pageName">
-  
-</other-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button (tap)="back()" ion-button icon-only color="royal">
+        <ion-icon md="md-arrow-back" ios="md-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{pageName}}</ion-title>
+    <ion-buttons end>
+      <button ion-button color="royal">
+       Apply
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 <ion-content >
  <div class="profile">
      <div>
             <img class="picture" src="assets/imgs/baby.jpg">
      </div>
+ </div>
+ <div class="text">
+     <p>Private Dedads</p>
+     <ion-item no-padding no-lines>
+        <ion-label fixed>Email number</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
  </div>
 </ion-content>
