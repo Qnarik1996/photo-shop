@@ -1,13 +1,29 @@
 
 <ion-header>
-
   <ion-navbar>
-    <ion-title>frame</ion-title>
+    <ion-title>{{pageName}}</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <div class="car-choose">
+  <ion-card (tap)="openPage()">
+    <ion-card-content >
+        Choose the photo
+    </ion-card-content>
+  </ion-card>
+</div>
 </ion-content>
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button>Ok</button>
+      </ion-col>
+      <ion-col>
+          <button ion-button (tap)="close()">Close</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

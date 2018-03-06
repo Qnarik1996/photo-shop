@@ -6,9 +6,7 @@ page-home {
     
     
     .card-background-page {
-      .scroll-content{
-        overflow: hidden
-    }
+    
         ion-card {
           position: relative;
           text-align: center;
@@ -36,7 +34,8 @@ page-home {
       .searchbar{
         border: none;
         background: none;
-        padding: 12vh 2vh
+        position: absolute;
+        top: 65%;
       }
       .searchbar .searchbar-input{
         height: 5rem;

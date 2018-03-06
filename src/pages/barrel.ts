@@ -11,4 +11,5 @@ export * from './edit/edit';
 export * from './photo/photo';
 export * from './order/order';
 export * from './other-header';
-export * from './frame/frame'
+export * from './frame/frame';
+export * from './frame-choose/frame-choose'

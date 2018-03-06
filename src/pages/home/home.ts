@@ -17,7 +17,7 @@ export class HomePage {
   initializeItems() {
     this.items = [
       {name:'Photos',component:PhotoPage},
-      {name:'Frame',component:FramePage},
+      {name:'Frames',component:FramePage},
     ];
   }
 
@@ -31,7 +31,7 @@ getItems(ev: any) {
   }
 }
 appPage(page){
-  let modal=this.modalCtrl.create(page.component,{'pageName':page.pageName});
+  let modal=this.modalCtrl.create(page.component,{'pageName':page.name});
     modal.present();
 }
 

@@ -24,7 +24,8 @@ import {SlidePage,
         PhotoPage,
         OrderPage,
         OtherHeader,
-        FramePage
+        FramePage,
+        FrameChoosePage
       } from '../pages/barrel'
 
 @NgModule({
@@ -43,7 +44,8 @@ import {SlidePage,
     PhotoPage,
     OrderPage,
     OtherHeader,
-    FramePage
+    FramePage,
+    FrameChoosePage
   ],
   imports: [
  
@@ -70,7 +72,8 @@ import {SlidePage,
     PhotoPage,
     OrderPage,
     OtherHeader,
-    FramePage
+    FramePage,
+    FrameChoosePage
   ],
   providers: [
     Local,

@@ -1,0 +1,25 @@
+page-frame-choose {
+    .top-header{
+        height: 38vh;
+        background: rgba(28, 206, 238, 0.87);
+        .text{
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+        }
+            .button-inner{
+                display: flex;
+                align-items: start
+            }
+            .button[icon-only]{
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: none;
+               
+            }
+        }
+    *[size]{
+        font-size: 2.5em
+    }
+}

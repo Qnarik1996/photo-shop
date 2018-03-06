@@ -3,7 +3,7 @@
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 </ion-header>
 
-<ion-content class="card-background-page">
+<ion-content class="card-background-page" >
     <ion-card *ngFor="let item of items" (click)="appPage(item)">
         <img src="assets/imgs/photo.jpeg"/>
         <div class="card-title">{{item.name}}</div>

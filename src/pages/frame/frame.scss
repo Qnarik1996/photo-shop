@@ -1,3 +1,31 @@
 page-frame {
-
+    .toolbar-background, .toolbar-background-ios{
+        background: rgba(28, 206, 238, 0.87);
+    }
+    .toolbar-title{
+        color: white
+    }
+    ion-content{
+        ion-card{
+            height: 15vh;
+            width: 20vh
+        }
+        .card-content-ios{
+            font-size: 1.8rem
+        }
+        
+    
+            .card-ios{
+            display: flex;
+            align-items: center
+        }
+        .card-content-ios{
+            margin: 0 auto
+        }
+}
+ion-footer{
+    .col{
+        text-align: center
+    }
+}
 }
