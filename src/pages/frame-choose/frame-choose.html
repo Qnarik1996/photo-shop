@@ -2,17 +2,52 @@
 <ion-content >
   <div class="top-header">
     
-      <div class="text">{{pageName}}</div>
-          <button icon-only ion-button (tap)="close()">
+      <div class="text">Frames</div>
+          <button class="close-button" icon-only ion-button (tap)="close()">
               <ion-icon size name="close"></ion-icon>
             </button>
      
 
     <ion-grid>
-      <ion-row>
-        <ion-col *ngFor=""></ion-col>
+      <ion-row >
+        <ion-col *ngFor="let item of holiday | showWithLimit: showall: 5" col-4>
+          <button ion-button round (tap)="equalValue(item,event)">{{item}}</button>
+        </ion-col>
+        <ion-col *ngIf="!showall">
+          <button ion-button round (tap)="show()">*****</button>
+        </ion-col>       
       </ion-row>
     </ion-grid>
+    <ion-searchbar (ionInput)="getItems($event)" [(ngModel)]="text"></ion-searchbar>
+  </div>
+  <div *ngFor="let iner of cardInformation">
+    <ion-card >
+      <ion-card-content>
+          <div class="image" (tap)="openSlide(iner)"> <img [src]=iner.image></div>
+      <div class="information">
+        <p id="name">{{iner.name}}</p>
+        <p>Photos in frame: {{iner.count}}</p>
+        <p>Price: $ {{iner.price}}  <span>+${{iner.delivery}}delivery</span></p>
+        </div>
+        <button class="buy" color="newblue" ion-button> Buy</button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="iner.open" center>
+      <div class="back"> <button ion-button (tap)="backSlide()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button></div>
+     
+        <ion-slides>
+            <ion-slide *ngFor="let image of iner.photos">
+              <img [src]=image>
+            </ion-slide>
+            
+          </ion-slides>
+          <div class="next"><button ion-button (tap)="goToSlide()">
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button></div>
+          
+        </ion-card>
   </div>
 
 </ion-content>

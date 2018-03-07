@@ -27,6 +27,7 @@ import {SlidePage,
         FramePage,
         FrameChoosePage
       } from '../pages/barrel'
+import { Showall } from '../pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,9 @@ import {SlidePage,
     OrderPage,
     OtherHeader,
     FramePage,
-    FrameChoosePage
+    FrameChoosePage,
+    Showall,
+
   ],
   imports: [
  
@@ -73,7 +76,7 @@ import {SlidePage,
     OrderPage,
     OtherHeader,
     FramePage,
-    FrameChoosePage
+    FrameChoosePage,
   ],
   providers: [
     Local,

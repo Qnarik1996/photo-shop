@@ -1,13 +1,15 @@
 page-frame-choose {
     .top-header{
-        height: 38vh;
+        
         background: rgba(28, 206, 238, 0.87);
         .text{
+            position: relative;
+            top: 1.5vh;
             color: white;
             text-align: center;
             font-size: 1.5em;
         }
-            .button-inner{
+            .close-button{
                 display: flex;
                 align-items: start
             }
@@ -18,8 +20,91 @@ page-frame-choose {
                 background: none;
                
             }
-        }
+            .button-round-ios{
+                height: 6vh;
+                width: 16vh;
+                background: white;
+                color: black;
+            }
+            .searchbar{
+                border: none;
+                background: none;
+               
+                
+              }
+              .searchbar .searchbar-input{
+                height: 5rem;
+              }
+              .searchbar .searchbar-search-icon{
+                top: 19px
+              }
+              .searchbar .searchbar-input{
+                border-radius: 20px
+              }
+              .searchbar.searchbar-left-aligned .searchbar-input{
+                box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+              }
+            }
+           .image{
+                border-radius: 10px;
+                 width: 14vh;
+                 float: left;
+                 height: 11vh;
+                 img{
+                    width: 14vh;
+                    height: 11vh;
+                 }
+            }
+            .information{
+                float: left;
+                 margin-left: 3vh;
+                 p{
+                     color: black;
+                     font-size: 1.6rem;
+                 }
+                 #name{
+                      font-size: 2.2rem;
+                 }
+                 span{
+                     font-size: 1rem
+                 }
+            }
+            ion-card{
+                position: relative;
+                .buy{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+            
+            .swiper-container{
+                height: 30vh;
+                width: 39vh;
+                float: left
+            }
+            .back{
+                float: left
+            }
+            .next{
+                float: right
+            }
+                
+                    .swiper-slide img{
+                    height: 30vh;
+                    width: 39vh;
+                    margin: 0 auto
+                }
+                
+            
+            
+        
     *[size]{
         font-size: 2.5em
     }
+    *[center]{
+        display: flex;
+    align-items: center;
+    }
+    
 }
